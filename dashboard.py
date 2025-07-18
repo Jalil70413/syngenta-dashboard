@@ -109,21 +109,21 @@ fig_trend = px.line(
 )
 st.plotly_chart(fig_trend, use_container_width=True)
 
-# -------------------------------------------------
-# TOP CUSTOMERS
-# -------------------------------------------------
-top_customers = (
-    filtered_df.groupby('Email (Billing)')['Order Subtotal Amount']
-    .sum()
-    .reset_index()
-    .rename(columns={'Email (Billing)': 'Customer Email', 'Order Subtotal Amount': 'Total Spend'})
-    .sort_values('Total Spend', ascending=False)
-    .head(10)
-)
+# # -------------------------------------------------
+# # TOP CUSTOMERS
+# # -------------------------------------------------
+# top_customers = (
+#     filtered_df.groupby('Email (Billing)')['Order Subtotal Amount']
+#     .sum()
+#     .reset_index()
+#     .rename(columns={'Email (Billing)': 'Customer Email', 'Order Subtotal Amount': 'Total Spend'})
+#     .sort_values('Total Spend', ascending=False)
+#     .head(10)
+# )
 
-st.subheader("🏆 Top 10 Customers by Total Spend")
-styled_top_customers = top_customers.style.format({"Total Spend": "Rs {:,}"})
-st.dataframe(styled_top_customers)
+# st.subheader("🏆 Top 10 Customers by Total Spend")
+# styled_top_customers = top_customers.style.format({"Total Spend": "Rs {:,}"})
+# st.dataframe(styled_top_customers)
 
 
 
