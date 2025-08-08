@@ -52,10 +52,10 @@ refund_value = filtered_df[filtered_df['Order Status'] == 'Refunded']['Order Sub
 # -------------------------------------------------
 st.title("📊 Syngenta Ecommerce Orders Analysis")
 # Automatically calculate min & max order dates
-min_date = filtered_df['Order Date'].min().strftime("%b %d, %Y")
-max_date = filtered_df['Order Date'].max().strftime("%b %d, %Y")
+# min_date = filtered_df['Order Date'].min().strftime("%b %d, %Y")
+# max_date = filtered_df['Order Date'].max().strftime("%b %d, %Y")
 
-st.markdown(f"### 🗓️ {min_date} to {max_date}")
+st.markdown("### 🗓️ May 13, 2025 to August 08, 2025")
 
 
 # -------------------------------------------------
